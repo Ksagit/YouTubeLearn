@@ -1,6 +1,6 @@
 import Svg, { Path } from "react-native-svg";
 
-export const SearchIcon = ({ color }: { color: string }) => (
+export const SearchIcon = ({ color }: { color?: string }) => (
   <Svg width={32} height={32} fill="none">
     <Path
       stroke={color ? color : "#2B2D42"}

@@ -1,6 +1,6 @@
 import Svg, { Path } from "react-native-svg";
 
-export const HomeIcon = ({ color }: { color: string }) => (
+export const HomeIcon = ({ color }: { color?: string }) => (
   <Svg width={32} height={32} fill="none">
     <Path
       fill={color ? color : "#2B2D42"}
