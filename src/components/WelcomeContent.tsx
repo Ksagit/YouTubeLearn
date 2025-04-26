@@ -8,7 +8,7 @@ export const WelcomeContent = () => {
         Welcome to the best YouTube-based learning application!
       </Text>
       <Link href="(tabs)/" asChild>
-        <Pressable className="bg-primary w-96 items-center rounded-2xl py-4">
+        <Pressable className="w-96 items-center rounded-2xl bg-primary py-4">
           <Text className="rounded-md text-2xl font-bold text-white">
             Log in as guest
           </Text>
