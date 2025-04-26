@@ -1,7 +1,13 @@
 import { Image } from "expo-image";
 import { Pressable, Text, View } from "react-native";
 
-export const VideoCard = ({ title }: { title: string }) => {
+export const VideoCard = ({
+  title,
+  large,
+}: {
+  title: string;
+  large?: boolean;
+}) => {
   const imagePath = (() => {
     switch (title) {
       case "React Native":
@@ -18,7 +24,12 @@ export const VideoCard = ({ title }: { title: string }) => {
   return (
     <Pressable>
       <Image
-        style={{ width: 185, height: 120, borderRadius: 10, margin: 5 }}
+        style={{
+          width: large ? 370 : 185,
+          height: 120,
+          borderRadius: 10,
+          margin: 5,
+        }}
         contentFit="fill"
         source={imagePath}
       />
