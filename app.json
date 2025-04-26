@@ -1,6 +1,6 @@
 {
   "expo": {
-    "scheme": "acme",
+    "scheme": "youtubelearn",
     "userInterfaceStyle": "automatic",
     "orientation": "default",
     "web": {
@@ -14,7 +14,13 @@
         }
       ]
     ],
-    "name": "youtube_learn",
-    "slug": "youtube_learn"
+    "name": "youtubelearn",
+    "slug": "youtubelearn",
+    "android": {
+      "package": "com.anonymous.youtubelearn"
+    },
+    "ios": {
+      "bundleIdentifier": "com.anonymous.youtubelearn"
+    }
   }
 }

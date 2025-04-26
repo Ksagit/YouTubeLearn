@@ -1,16 +1,24 @@
-# Expo Router and Tailwind CSS
+# YouTube Learn
 
-Use [Expo Router](https://docs.expo.dev/router/introduction/) with [Nativewind](https://www.nativewind.dev/v4/overview/) styling.
+A React Native Expo video application that serves as a resource for the latest knowledge needed by a Junior React Native Developer.
 
-## 🚀 How to use
+##  How to use
 
+Install dependencies with:
 ```sh
-npx create-expo-app -e with-tailwindcss
+npm install
 ```
 
-## Deploy
+Build the project with:
+```sh
+npx expo prebuild
+```
 
-Deploy on all platforms with Expo Application Services (EAS).
+Open the appropriate emulator with: 
+```sh
+// iOS emulator
+npx expo run ios
 
-- Deploy the website: `npx eas-cli deploy` — [Learn more](https://docs.expo.dev/eas/hosting/get-started/)
-- Deploy on iOS and Android using: `npx eas-cli build` — [Learn more](https://expo.dev/eas)
+// Android emulator
+npx expo run android
+```
