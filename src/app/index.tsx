@@ -1,6 +1,6 @@
 import { AppIcon } from "@/assets/svgs/AppIcon";
 import { Logo } from "@/assets/svgs/Logo";
-import { WelcomeMessage } from "@/components/WelcomeMessage";
+import { WelcomeContent } from "@/components/WelcomeContent";
 import { SafeAreaView } from "react-native";
 
 export default function LandingPage() {
@@ -8,7 +8,7 @@ export default function LandingPage() {
     <SafeAreaView className="bg-secondary flex-1 items-center justify-between">
       <Logo />
       <AppIcon />
-      <WelcomeMessage />
+      <WelcomeContent />
     </SafeAreaView>
   );
 }

@@ -1,7 +1,7 @@
 import { Link } from "expo-router";
 import { Pressable, Text, View } from "react-native";
 
-export const WelcomeMessage = () => {
+export const WelcomeContent = () => {
   return (
     <View className="items-center gap-y-6">
       <Text className="text-center text-2xl font-bold text-white">

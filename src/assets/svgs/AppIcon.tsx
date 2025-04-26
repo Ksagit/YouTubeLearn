@@ -1,7 +1,7 @@
-import Svg, { SvgProps, Path } from "react-native-svg";
+import Svg, { Path } from "react-native-svg";
 
-export const AppIcon = (props: SvgProps) => (
-  <Svg width={128} height={128} fill="none" {...props}>
+export const AppIcon = () => (
+  <Svg width={128} height={128} fill="none">
     <Path
       stroke="#2B2D42"
       strokeWidth={8}
