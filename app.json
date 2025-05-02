@@ -17,10 +17,10 @@
     "name": "youtubelearn",
     "slug": "youtubelearn",
     "android": {
-      "package": "com.anonymous.youtubelearn"
+      "package": "com.ksagit.youtubelearn"
     },
     "ios": {
-      "bundleIdentifier": "com.anonymous.youtubelearn"
+      "bundleIdentifier": "com.ksagit.youtubelearn"
     }
   }
 }
