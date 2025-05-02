@@ -1,3 +1,4 @@
+import { YouTubeSearchSchema } from "@/schemas";
 import { useQuery } from "@tanstack/react-query";
 
 export const useVideosQuery = (search: string) => {
@@ -10,8 +11,15 @@ export const useVideosQuery = (search: string) => {
       if (!response.ok) {
         throw new Error("YouTube API request failed");
       }
+      console.log(response);
       const data = await response.json();
-      return data;
+      return YouTubeSearchSchema.parse(data);
     },
+    gcTime: Infinity,
+    retry: false,
+    staleTime: Infinity,
+    refetchOnMount: false,
+    refetchOnWindowFocus: false,
+    refetchOnReconnect: false,
   });
 };

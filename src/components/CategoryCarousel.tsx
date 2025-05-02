@@ -1,8 +1,15 @@
 import { VideoCard } from "@/components/VideoCard";
+import { YouTubeSearchResponse } from "@/schemas";
 import { router } from "expo-router";
 import { Pressable, ScrollView, Text, View } from "react-native";
 
-export const CategoryCarousel = ({ title }: { title: string }) => {
+export const CategoryCarousel = ({
+  title,
+  videos,
+}: {
+  title: string;
+  videos: YouTubeSearchResponse;
+}) => {
   return (
     <>
       <View className="mx-2">
@@ -20,8 +27,6 @@ export const CategoryCarousel = ({ title }: { title: string }) => {
           </Pressable>
         </View>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-          <VideoCard title={title} />
-          <VideoCard title={title} />
           <VideoCard title={title} />
         </ScrollView>
       </View>
