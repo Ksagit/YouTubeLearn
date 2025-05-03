@@ -2,6 +2,7 @@
   "expo": {
     "scheme": "youtubelearn",
     "userInterfaceStyle": "automatic",
+    "icon": "./public/app-icon.png",
     "orientation": "default",
     "web": {
       "output": "static"
@@ -14,8 +15,8 @@
         }
       ]
     ],
-    "name": "youtubelearn",
-    "slug": "youtubelearn",
+    "name": "YouTube Learn",
+    "slug": "YouTubeLearn",
     "android": {
       "package": "com.ksagit.youtubelearn"
     },
