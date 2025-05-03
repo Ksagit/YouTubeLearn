@@ -27,7 +27,9 @@ export const CategoryCarousel = ({
           </Pressable>
         </View>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-          <VideoCard title={title} />
+          {videos.items.map((video) => (
+            <VideoCard video={video} key={video.etag} />
+          ))}
         </ScrollView>
       </View>
       <View className="h-0.5 bg-primary" />

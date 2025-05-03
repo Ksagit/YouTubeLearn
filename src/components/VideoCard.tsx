@@ -1,41 +1,30 @@
+import { VideoType } from "@/schemas";
 import { Image } from "expo-image";
 import { Pressable, Text, View } from "react-native";
 
-export const VideoCard = ({
-  title,
-  large,
-}: {
-  title: string;
-  large?: boolean;
-}) => {
-  const imagePath = (() => {
-    switch (title) {
-      case "React Native":
-        return require("../../src/assets/thumbnails/React_Native_thumbnail.webp");
-      case "React":
-        return require("../../src/assets/thumbnails/React_thumbnail.png");
-      case "JavaScript":
-        return require("../../src/assets/thumbnails/JavaScript_thumbnail.png");
-      case "TypeScript":
-        return require("../../src/assets/thumbnails/TypeScript_thumbnail.png");
-    }
-  })();
-
+export const VideoCard = ({ video }: { video: VideoType }) => {
+  const formattedDate = new Date(video.snippet.publishedAt).toLocaleDateString(
+    "en-US",
+    { year: "numeric", month: "short", day: "numeric" },
+  );
+  console.log(video);
   return (
-    <Pressable>
+    <Pressable className="items-center">
       <Image
+        source={video.snippet.thumbnails.medium.url}
         style={{
-          width: large ? 370 : 185,
-          height: 120,
+          width: video.snippet.thumbnails.medium.width,
+          height: video.snippet.thumbnails.medium.height,
           borderRadius: 10,
           margin: 5,
         }}
         contentFit="fill"
-        source={imagePath}
       />
       <View>
-        <Text>{title} in 100 seconds</Text>
-        <Text className="text-right">12.12.2012</Text>
+        <Text className="w-[22rem]" numberOfLines={1}>
+          {video.snippet.title}
+        </Text>
+        <Text className="text-right text-gray-500">{formattedDate}</Text>
       </View>
     </Pressable>
   );

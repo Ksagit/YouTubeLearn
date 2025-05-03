@@ -34,15 +34,15 @@ export default function HomePage() {
         {reactNativeVideos ? (
           <CategoryCarousel title="React Native" videos={reactNativeVideos} />
         ) : null}
-        {reactNativeVideos ? (
-          <CategoryCarousel title="React Native" videos={reactNativeVideos} />
+        {/* {reactVideos ? (
+          <CategoryCarousel title="React" videos={reactVideos} />
         ) : null}
-        {reactNativeVideos ? (
-          <CategoryCarousel title="React Native" videos={reactNativeVideos} />
+        {typeScriptVideos ? (
+          <CategoryCarousel title="TypeScript" videos={typeScriptVideos} />
         ) : null}
-        {reactNativeVideos ? (
-          <CategoryCarousel title="React Native" videos={reactNativeVideos} />
-        ) : null}
+        {javaScriptVideos ? (
+          <CategoryCarousel title="JavaScript" videos={javaScriptVideos} />
+        ) : null} */}
       </ScrollView>
     </SafeAreaView>
   );

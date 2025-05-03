@@ -11,7 +11,6 @@ export const useVideosQuery = (search: string) => {
       if (!response.ok) {
         throw new Error("YouTube API request failed");
       }
-      console.log(response);
       const data = await response.json();
       return YouTubeSearchSchema.parse(data);
     },
