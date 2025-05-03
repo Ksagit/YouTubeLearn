@@ -30,7 +30,7 @@ export const TopBar = ({
         />
       </View>
       {/* This would redirect a user to the settings page */}
-      <Link href="">
+      <Link href="/">
         <SettingsIcon />
       </Link>
     </View>

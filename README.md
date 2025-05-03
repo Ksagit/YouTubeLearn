@@ -14,6 +14,11 @@ Install dependencies with:
 npm install
 ```
 
+Create a .env file with:
+```sh
+EXPO_PUBLIC_YOUTUBE_DATA_API_KEY="foo"
+```
+
 Build the project with:
 ```sh
 npx expo prebuild
@@ -27,3 +32,11 @@ npx expo run ios
 // Android emulator
 npx expo run android
 ```
+
+## TODO
+
+[ ] video details page
+[ ] useInfiniteQuery for search page
+[ ] add placeholders for search results
+[ ] add settings
+[ ] add ToS and PP links

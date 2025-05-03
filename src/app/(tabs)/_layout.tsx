@@ -1,4 +1,4 @@
-import { colors } from "@/app/utils";
+import { colors } from "@/utils";
 import { HomeIcon } from "@/assets/svgs/HomeIcon";
 import { SearchIcon } from "@/assets/svgs/SearchIcon";
 import { Tabs } from "expo-router";

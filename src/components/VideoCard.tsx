@@ -1,5 +1,6 @@
 import { VideoType } from "@/schemas";
 import { Image } from "expo-image";
+import { router } from "expo-router";
 import { Pressable, Text, View } from "react-native";
 
 export const VideoCard = ({
@@ -15,7 +16,10 @@ export const VideoCard = ({
   );
 
   return (
-    <Pressable className="items-center">
+    <Pressable
+      className="items-center"
+      onPress={() => router.navigate("/(tabs)/video")}
+    >
       <Image
         source={video.snippet.thumbnails.medium.url}
         style={{
