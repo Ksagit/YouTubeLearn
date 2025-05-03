@@ -4,9 +4,11 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { VideoCard } from "@/components/VideoCard";
 import { Pressable, ScrollView, Text, View } from "react-native";
 import { FilterModal } from "@/components/FilterModal";
+import { useVideosQuery } from "@/queries";
 
 export default function SerachPage() {
   const { search } = useLocalSearchParams<{ search: string }>();
+  const { data: searchedVideos } = useVideosQuery(search);
   const [isOpen, setIsOpen] = useState(false);
   const [filter, setFilter] = useState("Most Popular");
 
@@ -28,10 +30,9 @@ export default function SerachPage() {
           <Text className="text-primary">{filter}</Text>
         </Pressable>
         <View className="flex-1 items-center gap-y-4">
-          <VideoCard title={search} large={true} />
-          <VideoCard title={search} large={true} />
-          <VideoCard title={search} large={true} />
-          <VideoCard title={search} large={true} />
+          {searchedVideos?.items.map((video) => (
+            <VideoCard video={video} large={true} key={video.etag} />
+          ))}
         </View>
       </ScrollView>
     </SafeAreaView>
