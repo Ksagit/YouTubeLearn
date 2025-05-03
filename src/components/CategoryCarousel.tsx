@@ -28,7 +28,7 @@ export const CategoryCarousel = ({
         </View>
         <ScrollView horizontal showsHorizontalScrollIndicator={false}>
           {videos.items.map((video) => (
-            <VideoCard video={video} key={video.etag} />
+            <VideoCard title={title} video={video} key={video.etag} />
           ))}
         </ScrollView>
       </View>

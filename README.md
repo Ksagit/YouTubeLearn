@@ -37,6 +37,7 @@ npx expo run android
 
 [ ] video details page
 [ ] useInfiniteQuery for search page
+[ ] add sorting to search page
 [ ] add placeholders for search results
 [ ] add settings
 [ ] add ToS and PP links

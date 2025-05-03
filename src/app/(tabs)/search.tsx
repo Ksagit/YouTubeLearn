@@ -31,7 +31,12 @@ export default function SerachPage() {
         </Pressable>
         <View className="flex-1 items-center gap-y-4">
           {searchedVideos?.items.map((video) => (
-            <VideoCard video={video} large={true} key={video.etag} />
+            <VideoCard
+              title={search}
+              video={video}
+              large={true}
+              key={video.etag}
+            />
           ))}
         </View>
       </ScrollView>

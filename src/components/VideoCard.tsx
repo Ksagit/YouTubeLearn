@@ -4,9 +4,11 @@ import { router } from "expo-router";
 import { Pressable, Text, View } from "react-native";
 
 export const VideoCard = ({
+  title,
   video,
   large,
 }: {
+  title: string;
   video: VideoType;
   large?: boolean;
 }) => {
@@ -18,7 +20,12 @@ export const VideoCard = ({
   return (
     <Pressable
       className="items-center"
-      onPress={() => router.navigate("/(tabs)/video")}
+      onPress={() =>
+        router.navigate({
+          pathname: "/video",
+          params: { etag: video.etag, title: title },
+        })
+      }
     >
       <Image
         source={video.snippet.thumbnails.medium.url}
