@@ -14,18 +14,6 @@ export const WelcomeContent = () => {
           </Text>
         </Pressable>
       </Link>
-      <View className="flex-row flex-wrap items-center justify-center">
-        <Text className="text-white">By continuing you agree with the </Text>
-        {/* This link would redirect a user to the ToS page */}
-        <Link href="/" className="text-primary underline">
-          Terms of Service
-        </Link>
-        <Text className="text-white"> and the </Text>
-        {/* This link would redirect a user to the Privacy Policy page */}
-        <Link href="/" className="text-primary underline">
-          Privacy Policy
-        </Link>
-      </View>
     </View>
   );
 };

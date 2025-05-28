@@ -5,15 +5,18 @@ import { VideoCard } from "@/components/VideoCard";
 import { Pressable, ScrollView, Text, View } from "react-native";
 import { FilterModal } from "@/components/FilterModal";
 import { useVideosQuery } from "@/queries";
+import { SearchBar } from "@/components/TopBar";
 
 export default function SerachPage() {
   const { search } = useLocalSearchParams<{ search: string }>();
+  const [ newSearch, setNewSearch] = useState(search);
   const { data: searchedVideos } = useVideosQuery(search);
   const [isOpen, setIsOpen] = useState(false);
   const [filter, setFilter] = useState("Most Popular");
 
   return (
     <SafeAreaView className="flex-1">
+      <SearchBar search={newSearch} setSearch={(value)=> setNewSearch(value)} />
       <FilterModal
         isOpen={isOpen}
         setIsOpen={setIsOpen}

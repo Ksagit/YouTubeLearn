@@ -40,4 +40,3 @@ npx expo run android
 - add sorting to search page
 - add placeholders for search results
 - add settings
-- remove ToS and PP mentions

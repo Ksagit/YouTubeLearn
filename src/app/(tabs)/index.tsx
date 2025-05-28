@@ -1,8 +1,8 @@
 import { useVideosQuery } from "@/queries";
 import { CategoryCarousel } from "@/components/CategoryCarousel";
-import { TopBar } from "@/components/TopBar";
 import { useState } from "react";
 import { SafeAreaView, ScrollView } from "react-native";
+import { SearchBar } from "@/components/TopBar";
 
 export default function HomePage() {
   const [search, setSearch] = useState("");
@@ -11,6 +11,7 @@ export default function HomePage() {
     isError: isReactNativeError,
     data: reactNativeVideos,
   } = useVideosQuery("React Native");
+  // The remaining queries are commented out to conserve the YT Data API usage quota
   // const {
   //   isPending: isReactPending,
   //   isError: isReactError,
@@ -30,7 +31,7 @@ export default function HomePage() {
   return (
     <SafeAreaView className="flex-1">
       <ScrollView showsVerticalScrollIndicator={false}>
-        <TopBar search={search} setSearch={setSearch} />
+        <SearchBar search={search} setSearch={setSearch} />
         {reactNativeVideos ? (
           <CategoryCarousel title="React Native" videos={reactNativeVideos} />
         ) : null}

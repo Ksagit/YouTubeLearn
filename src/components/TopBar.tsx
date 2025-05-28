@@ -3,7 +3,7 @@ import { SettingsIcon } from "@/assets/svgs/SettingsIcon";
 import { Link, router } from "expo-router";
 import { Pressable, TextInput, View } from "react-native";
 
-export const TopBar = ({
+export const SearchBar = ({
   search,
   setSearch,
 }: {
